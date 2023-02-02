@@ -17,11 +17,13 @@ scoop bucket add versions
 scoop bucket add nonportable
 scoop bucket add main
 scoop update
+choco upgrade chocolatey
 
 if($all -Or $basicapps)
 {
     scoop install firefox
     scoop install powertoys
+    choco install libreoffice-fresh
 }
 if($all -Or $gameapps)
 {
@@ -32,6 +34,7 @@ if($all -Or $gameapps)
     scoop install obs-studio
     scoop install actools
     scoop install racelab
+    choco install geforce-experience
 }
 if($all -Or $fileutils)
 {
