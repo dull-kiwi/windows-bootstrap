@@ -14,6 +14,7 @@ scoop install git
 scoop bucket add extras
 scoop bucket add games
 scoop bucket add versions
+scoop bucket add nonportable
 scoop bucket add main
 scoop update
 
