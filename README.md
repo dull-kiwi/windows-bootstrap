@@ -10,6 +10,6 @@ irm get.scoop.sh | iex
 ```
 cd <script directory>
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-.\win_init.ps1 --all
+.\win_init.ps1 -all
 ```
 
