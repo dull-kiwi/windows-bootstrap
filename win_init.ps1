@@ -9,14 +9,12 @@
       [Parameter(HelpMessage="Install Basic apps")]
       [switch]$basicapps = $False)
       
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Optional: Needed to run a remote script the first time
-irm get.scoop.sh -outfile 'install.ps1'
-.\install.ps1
+scoop install git
 
-scoop add bucket extras
-scoop add bucket games
-scoop add bucket versions
-scoop add bucket main
+scoop bucket add extras
+scoop bucket add games
+scoop bucket add versions
+scoop bucket add main
 scoop update
 
 if($all -Or $basicapps)
@@ -39,15 +37,16 @@ if($all -Or $fileutils)
     scoop install 7zip
     scoop install winrar
     scoop install handbrake
+    scoop install gdrive
 }
 if($all -Or $devtools)
 {
-    scoop install universal-ctags
+    scoop install ctags
     scoop install gcc
     scoop install git
-    scoop install python310
+    scoop install python
     scoop install vscode
-    scoop install virtualbox-with-extension-pack-np
+    scoop install portable-virtualbox 
     scoop install windows-terminal
 }
 
