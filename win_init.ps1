@@ -20,16 +20,21 @@ scoop bucket add main
 scoop update
 choco upgrade chocolatey
 
+scoop install scoop-search
+
 if($all -Or $basicapps)
 {
     scoop install firefox
     scoop install powertoys
     choco install libreoffice-fresh
+    scoop install treesize-free
 }
 if($all -Or $mediaapps)
 {
     scoop install gimp
     scoop install audacity
+    scoop install vlc
+    scoop install spotify
 }
 if($all -Or $gameapps)
 {
@@ -58,4 +63,5 @@ if($all -Or $devtools)
     scoop install vscode
     scoop install portable-virtualbox 
     scoop install windows-terminal
+    scoop install hxd
 }
